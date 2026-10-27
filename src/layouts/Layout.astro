@@ -1,0 +1,33 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-dvh">
+    <header class="mx-auto flex max-w-6xl items-center justify-between px-4 pt-5 sm:px-8">
+      <a href="/" class="font-mono text-xs font-bold uppercase tracking-[0.2em]">scottsbots</a>
+      <a href="https://github.com/dsneil" class="font-mono text-xs uppercase tracking-[0.2em] text-graphite hover:text-ink">GitHub ↗</a>
+    </header>
+    <slot />
+    <footer class="mx-auto mt-24 max-w-6xl px-4 font-mono text-xs text-graphite sm:px-8">
+      <div class="border-t border-rule py-8">Built and labeled by Scott.</div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+---
+import type { Project } from '../lib/projects';
+
+interface Props {
+  link: Project['data']['link'];
+  size?: 'sm' | 'lg';
+}
+
+const { link, size = 'sm' } = Astro.props;
+const text = size === 'lg' ? 'text-base' : 'text-sm';
+const label = link.kind === 'live' ? 'Open app' : 'View code';
+---
+
+{
+  link.kind === 'live' || link.kind === 'code' ? (
+    <span class={`inline-flex flex-wrap items-baseline gap-x-3 ${text}`}>
+      <a href={link.url} class="relative z-10 font-bold text-link underline decoration-2 underline-offset-4 hover:decoration-4">
+        {label} ↗
+      </a>
+      {link.note && <span class="font-mono text-xs text-graphite">{link.note}</span>}
+    </span>
+  ) : (
+    <span class={`font-mono text-xs text-graphite`}>
+      {link.kind === 'soon' ? 'Code going public soon' : link.note ?? 'Clip only'}
+    </span>
+  )
+}

@@ -1,0 +1,11 @@
+---
+interface Props {
+  text: string;
+  tilt?: string;
+  class?: string;
+}
+
+const { text, tilt = '-1.5deg', class: cls = '' } = Astro.props;
+---
+
+<span class:list={['tape', cls]} style={`--tilt: ${tilt}`}>{text}</span>

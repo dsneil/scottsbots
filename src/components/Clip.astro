@@ -1,0 +1,42 @@
+---
+interface Props {
+  src?: string;
+  poster?: string;
+  name: string;
+}
+
+const { src, poster, name } = Astro.props;
+---
+
+<div class="clip relative aspect-[16/10] overflow-hidden rounded-[6px] bg-screen ring-1 ring-rule">
+  {
+    src ? (
+      <video
+        class="h-full w-full object-cover"
+        src={src}
+        poster={poster}
+        muted
+        loop
+        playsinline
+        autoplay
+        preload="metadata"
+        aria-label={`Demo of ${name}`}
+      />
+    ) : (
+      <div class="flex h-full w-full items-end justify-end p-4">
+        <span class="font-mono text-[11px] uppercase tracking-[0.18em] text-graphite">Clip coming</span>
+      </div>
+    )
+  }
+</div>
+
+<script>
+  // Reduced motion: stop autoplay and hand control to the viewer.
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll<HTMLVideoElement>('.clip video').forEach((v) => {
+      v.pause();
+      v.removeAttribute('autoplay');
+      v.controls = true;
+    });
+  }
+</script>

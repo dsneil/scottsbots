@@ -1,0 +1,70 @@
+---
+import { render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Tape from '../../components/Tape.astro';
+import Clip from '../../components/Clip.astro';
+import ProjectLink from '../../components/ProjectLink.astro';
+import { getProjects, builtLabel, tilt, AREA_LABEL, type Project } from '../../lib/projects';
+
+export async function getStaticPaths() {
+  const projects = await getProjects();
+  return projects.map((p, i) => ({
+    params: { slug: p.id },
+    props: { project: p, index: i, prev: projects[i - 1], next: projects[i + 1] },
+  }));
+}
+
+interface Props {
+  project: Project;
+  index: number;
+  prev?: Project;
+  next?: Project;
+}
+
+const { project, index, prev, next } = Astro.props;
+const { data } = project;
+const { Content } = await render(project);
+---
+
+<Layout title={`${data.name} · scottsbots`} description={data.tagline}>
+  <main class="mx-auto max-w-6xl px-4 sm:px-8">
+    <a href="/" class="mt-10 inline-block font-mono text-xs uppercase tracking-[0.16em] text-graphite hover:text-ink">← All bots</a>
+
+    <div class="mt-10">
+      <Tape text={data.name} tilt={tilt(index)} class="text-sm sm:text-lg" />
+      <h1 class="wordmark mt-8 max-w-4xl text-[clamp(2rem,5.5vw,3.75rem)] !leading-[0.98]">{data.tagline}</h1>
+    </div>
+
+    <div class="mt-12">
+      <Clip src={data.clip} poster={data.poster} name={data.name} />
+    </div>
+
+    <div class="mt-14 grid gap-12 lg:grid-cols-[1fr_18rem]">
+      <article class="prose-bot max-w-2xl">
+        <Content />
+      </article>
+      <dl class="h-fit border-t border-rule font-mono text-xs">
+        <div class="flex justify-between gap-4 border-b border-rule py-3">
+          <dt class="uppercase tracking-[0.16em] text-graphite">Built</dt>
+          <dd>{builtLabel(data.built)}</dd>
+        </div>
+        <div class="flex justify-between gap-4 border-b border-rule py-3">
+          <dt class="uppercase tracking-[0.16em] text-graphite">Area</dt>
+          <dd>{AREA_LABEL[data.area]}</dd>
+        </div>
+        <div class="border-b border-rule py-3">
+          <dt class="uppercase tracking-[0.16em] text-graphite">Stack</dt>
+          <dd class="mt-2 leading-relaxed">{data.stack.join(' / ')}</dd>
+        </div>
+        <div class="py-4 font-body">
+          <ProjectLink link={data.link} size="lg" />
+        </div>
+      </dl>
+    </div>
+
+    <nav class="mt-20 flex justify-between gap-6 border-t border-rule pt-6 font-mono text-xs uppercase tracking-[0.16em]">
+      {prev ? <a href={`/p/${prev.id}/`} class="text-graphite hover:text-ink">← {prev.data.name}</a> : <span />}
+      {next && <a href={`/p/${next.id}/`} class="text-right text-graphite hover:text-ink">{next.data.name} →</a>}
+    </nav>
+  </main>
+</Layout>
