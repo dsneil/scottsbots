@@ -8,13 +8,12 @@ export async function getProjects(): Promise<Project[]> {
 }
 
 export function builtLabel(d: Date): string {
-  return d.toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
+  return d.toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' }).toUpperCase();
 }
 
-const TILTS = ['-1.6deg', '1.1deg', '-0.7deg', '1.5deg', '-1.2deg', '0.8deg', '-1.9deg', '1.3deg', '-0.9deg'];
-
-export function tilt(i: number): string {
-  return TILTS[i % TILTS.length];
+// Units are numbered in build order.
+export function unitLabel(i: number): string {
+  return `UNIT-${String(i + 1).padStart(2, '0')}`;
 }
 
 export const AREA_LABEL: Record<Project['data']['area'], string> = {

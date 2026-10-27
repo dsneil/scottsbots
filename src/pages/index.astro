@@ -1,51 +1,62 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Tape from '../components/Tape.astro';
 import Clip from '../components/Clip.astro';
 import ProjectLink from '../components/ProjectLink.astro';
-import { getProjects, builtLabel, tilt, AREA_LABEL } from '../lib/projects';
+import { getProjects, builtLabel, unitLabel, AREA_LABEL } from '../lib/projects';
 
 const projects = await getProjects();
 const first = projects[0].data.built;
 const last = projects[projects.length - 1].data.built;
-const span = `${first.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' })}–${builtLabel(last)}`;
+const span = `${first.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' }).toUpperCase()}–${builtLabel(last)}`;
 ---
 
 <Layout
   title="scottsbots"
   description="Software Scott built for trading, crypto wallets, Magic cards and home gadgets, with a short clip of each one running."
 >
-  <main class="mx-auto max-w-6xl px-4 sm:px-8">
-    <section class="pt-16 pb-20 sm:pt-24 sm:pb-28">
-      <h1 class="wordmark text-[clamp(3rem,13vw,10rem)]">scottsbots</h1>
-      <div class="mt-8 flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-10">
-        <Tape text={`${projects.length} bots · ${span}`} tilt="-2deg" class="self-start text-sm sm:text-base" />
-        <p class="max-w-xl text-lg leading-relaxed text-graphite">
-          Software I built for trading, crypto wallets, Magic cards and my apartment. Each one has a short
-          clip of it running, plus a link to the live app or the code where I can share it.
-        </p>
-      </div>
+  <main>
+    <section class="pt-16 pb-14">
+      <h1 class="dot text-[clamp(2.6rem,9vw,5rem)]">scottsbots</h1>
+      <p class="mt-6 max-w-xl leading-relaxed">
+        Software I built for trading, crypto wallets, Magic cards and my apartment. Each unit has a short clip of
+        it running, plus a link to the live app or the code where I can share it.
+      </p>
+      <dl class="mt-10 grid grid-cols-2 border-t border-l border-line sm:grid-cols-3">
+        <div class="border-r border-b border-line px-3 py-2">
+          <dt class="label">Units</dt>
+          <dd class="mt-1">{projects.length}</dd>
+        </div>
+        <div class="border-r border-b border-line px-3 py-2">
+          <dt class="label">Built</dt>
+          <dd class="mt-1">{span}</dd>
+        </div>
+        <div class="col-span-2 border-r border-b border-line px-3 py-2 sm:col-span-1">
+          <dt class="label">Online now</dt>
+          <dd class="mt-1">{projects.filter((p) => p.data.link.kind === 'live').length}</dd>
+        </div>
+      </dl>
     </section>
 
-    <ol class="grid gap-x-12 gap-y-20 border-t border-rule pt-16 lg:grid-cols-2">
+    <ol class="grid gap-x-10 gap-y-16 lg:grid-cols-2">
       {
         projects.map((p, i) => (
-          <li class="group relative">
-            <div class="relative">
+          <li class="group relative border-t border-line pt-3">
+            <p class="label flex justify-between">
+              <span>{unitLabel(i)}</span>
+              <span>
+                {AREA_LABEL[p.data.area]} · {builtLabel(p.data.built)}
+              </span>
+            </p>
+            <div class="mt-3">
               <Clip src={p.data.clip} poster={p.data.poster} name={p.data.name} />
-              <h2 class="absolute -bottom-4 left-4 text-xs sm:text-sm">
-                <a href={`/p/${p.id}/`} class="after:absolute after:inset-0 after:content-['']">
-                  <Tape text={p.data.name} tilt={tilt(i)} />
-                </a>
-              </h2>
             </div>
-            <p class="mt-9 font-mono text-[11px] uppercase tracking-[0.16em] text-graphite">
-              {builtLabel(p.data.built)} · {AREA_LABEL[p.data.area]}
-            </p>
-            <p class="mt-3 text-xl leading-snug group-hover:underline group-hover:decoration-rule group-hover:underline-offset-4">
-              {p.data.tagline}
-            </p>
-            <p class="mt-3 font-mono text-xs leading-relaxed text-graphite">{p.data.stack.join(' / ')}</p>
+            <h2 class="dot mt-5 text-[1.7rem]">
+              <a href={`/p/${p.id}/`} class="after:absolute after:inset-0 after:content-[''] group-hover:underline group-hover:decoration-2 group-hover:underline-offset-4">
+                {p.data.name}
+              </a>
+            </h2>
+            <p class="mt-3 leading-relaxed">{p.data.tagline}</p>
+            <p class="label mt-3 normal-case tracking-normal">{p.data.stack.join(' / ')}</p>
             <div class="mt-5">
               <ProjectLink link={p.data.link} />
             </div>

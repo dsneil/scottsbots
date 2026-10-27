@@ -8,7 +8,7 @@ interface Props {
 const { src, poster, name } = Astro.props;
 ---
 
-<div class="clip relative aspect-[16/10] overflow-hidden rounded-[6px] bg-screen ring-1 ring-rule">
+<div class="clip relative aspect-[16/10] overflow-hidden border border-line bg-panel">
   {
     src ? (
       <video
@@ -23,12 +23,22 @@ const { src, poster, name } = Astro.props;
         aria-label={`Demo of ${name}`}
       />
     ) : (
-      <div class="flex h-full w-full items-end justify-end p-4">
-        <span class="font-mono text-[11px] uppercase tracking-[0.18em] text-graphite">Clip coming</span>
+      <div class="scan flex h-full w-full items-center justify-center">
+        <span class="label">No signal</span>
       </div>
     )
   }
 </div>
+
+<style>
+  .scan {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent 0 3px,
+      color-mix(in srgb, var(--ink) 6%, transparent) 3px 4px
+    );
+  }
+</style>
 
 <script>
   // Reduced motion: stop autoplay and hand control to the viewer.
