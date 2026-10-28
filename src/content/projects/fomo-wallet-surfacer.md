@@ -1,5 +1,5 @@
 ---
-name: Fomo Wallet Surfacer
+name: fomo Wallet Matcher
 built: 2026-08-17
 area: crypto
 tagline: "A Chrome extension that shows the real wallets behind fomo traders."
@@ -8,11 +8,12 @@ link: { kind: none, note: Private extension }
 clip: /clips/fomo-wallet-surfacer.mp4
 poster: /clips/fomo-wallet-surfacer.jpg
 ---
-fomo shows each holder's handle and balance but never their wallet address. The
-extension recovers it by matching each holder's balance against the token's real
-on-chain holder list, then adds a copy button next to the name.
 
-- Copy buttons on the token holders list, the top traders list and trader profiles
-- Solana and EVM wallets linked per trader; one EVM match covers Base, BNB, Ethereum and Robinhood Chain
-- Abstains instead of guessing: when a balance fits more than one wallet, it shows the shortlist
-- Caches every match, so each token's holder list is looked up once
+fomo is a popular social trading app, but it intentionally obfuscates each trader's address.
+Knowing the exact wallet address is useful for my analysis, understanding and tracking. It is
+possible to do manually, but this tool automatically looks at on-chain data to identify and
+surface each trader's associated wallet addresses.
+
+- Looks at on-chain data around token holdings, bridge transactions and funding events to link wallet addresses across chains to trader profiles
+- Surfaces wallets in place for quicker analysis and tracking
+- Fuzzy matches are surfaced to the user to select the correct pairing
