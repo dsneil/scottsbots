@@ -34,7 +34,7 @@ const { Content } = await render(project);
     <p class="mt-5 max-w-2xl text-lg leading-relaxed">{data.tagline}</p>
 
     <div class="mt-10">
-      <Clip src={data.clip} poster={data.poster} name={data.name} />
+      <Clip src={data.clip} poster={data.poster} name={data.name} mode="play" />
     </div>
 
     <div class="mt-12 grid gap-12 lg:grid-cols-[1fr_17rem]">

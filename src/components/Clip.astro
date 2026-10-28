@@ -3,32 +3,40 @@ interface Props {
   src?: string;
   poster?: string;
   name: string;
+  /** still = poster only (index cards); play = the video, started on arrival (project page). */
+  mode?: 'still' | 'play';
 }
 
-const { src, poster, name } = Astro.props;
+const { src, poster, name, mode = 'still' } = Astro.props;
 ---
 
-<div class="clip relative aspect-[16/10] overflow-hidden border border-line bg-panel">
-  {
-    src ? (
+{
+  mode === 'play' && src ? (
+    <div class="clip border border-line bg-panel">
       <video
-        class="h-full w-full object-cover"
+        class="block h-auto w-full"
         src={src}
         poster={poster}
         muted
         loop
         playsinline
-        autoplay
+        controls
         preload="metadata"
         aria-label={`Demo of ${name}`}
       />
-    ) : (
-      <div class="scan flex h-full w-full items-center justify-center">
-        <span class="label">No signal</span>
-      </div>
-    )
-  }
-</div>
+    </div>
+  ) : (
+    <div class="relative aspect-[16/10] overflow-hidden border border-line bg-panel">
+      {poster ? (
+        <img class="h-full w-full object-cover object-top" src={poster} alt={`${name} screenshot`} loading="lazy" decoding="async" />
+      ) : (
+        <div class="scan flex h-full w-full items-center justify-center">
+          <span class="label">No signal</span>
+        </div>
+      )}
+    </div>
+  )
+}
 
 <style>
   .scan {
@@ -41,23 +49,10 @@ const { src, poster, name } = Astro.props;
 </style>
 
 <script>
-  const videos = document.querySelectorAll<HTMLVideoElement>('.clip video');
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    // Reduced motion: stop autoplay and hand control to the viewer.
-    videos.forEach((v) => {
-      v.pause();
-      v.removeAttribute('autoplay');
-      v.controls = true;
+  // Start the demo when the project page opens, unless the viewer asked for reduced motion.
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll<HTMLVideoElement>('.clip video').forEach((v) => {
+      v.play().catch(() => {});
     });
-  } else {
-    // Play only while on screen; also covers browsers that skip the autoplay attribute.
-    const io = new IntersectionObserver((entries) => {
-      for (const e of entries) {
-        const v = e.target as HTMLVideoElement;
-        if (e.isIntersecting) v.play().catch(() => (v.controls = true));
-        else v.pause();
-      }
-    });
-    videos.forEach((v) => io.observe(v));
   }
 </script>

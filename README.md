@@ -20,9 +20,10 @@ One Markdown file per project in `src/content/projects/`. Schema: `src/content.c
 | `area` | markets / crypto / cards / home / money |
 | `link.kind` | `live` (open app) / `code` (public repo) / `soon` (repo going public) / `none` (clip only) |
 | `link.note` | Short caveat shown next to the link, e.g. "Login required" |
-| `clip`, `poster` | Paths under `public/clips/`; omit for the "Clip coming" placeholder |
+| `clip`, `poster` | Paths under `public/clips/`; omit for the "No signal" placeholder |
 
 ## Clips
 
-20–40 s, muted, H.264 MP4 (or WebM), 16:10, 2–4 MB, in `public/clips/<slug>.mp4` with a
-`<slug>.jpg` poster. Longer walkthroughs go on YouTube (unlisted).
+Muted H.264 MP4, kept at the source resolution, in `public/clips/<slug>.mp4` with a
+`<slug>.jpg` poster. Cards on the home page show the poster only; the video plays on the project page.
+Any aspect ratio works on the project page; cards crop the poster to 16:10 from the top.
