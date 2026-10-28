@@ -1,5 +1,6 @@
 ---
 name: WalletMatcher
+order: 9
 built: 2026-07-28
 area: crypto
 tagline: "Paste a Solana wallet and find the other wallets the same person controls."

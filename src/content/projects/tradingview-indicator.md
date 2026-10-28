@@ -1,5 +1,6 @@
 ---
 name: Breakout Indicator
+order: 8
 built: 2026-03-10
 area: markets
 tagline: "A TradingView indicator that marks breakouts and earnings gaps on the chart."

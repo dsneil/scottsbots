@@ -1,9 +1,9 @@
 ---
 name: BiKnow
-order: 4
+order: 2
 built: 2026-08-13
 area: crypto
-tagline: "Live trades from a watchlist of Solana and EVM wallets, as they happen."
+tagline: "Realtime blockchain transaction tracker for curated set of 1000+ wallets, processing thousands of txns/day."
 stack: [Next.js, Supabase Realtime, Helius webhooks, Tailwind]
 link: { kind: live, url: "https://wallettrackerapp.vercel.app", note: Login required }
 ---

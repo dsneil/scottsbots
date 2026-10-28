@@ -1,6 +1,6 @@
 ---
 name: Finance Tracker
-order: 6
+order: 10
 built: 2026-01-12
 area: money
 tagline: "One view of every brokerage account, built from pasted text and screenshots."
