@@ -1,5 +1,6 @@
 ---
 name: MagicStats
+order: 2
 built: 2026-10-21
 area: cards
 tagline: "Price history and scores for sealed Magic: The Gathering products."

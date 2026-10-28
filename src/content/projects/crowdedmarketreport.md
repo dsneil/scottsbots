@@ -1,5 +1,6 @@
 ---
 name: CMR Scorecard
+order: 3
 built: 2026-10-26
 area: markets
 tagline: "500+ market videos and reports turned into calls, easily viewable on respective charts."

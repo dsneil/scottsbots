@@ -15,6 +15,10 @@ const projects = defineCollection({
       url: z.string().url().optional(),
       note: z.string().optional(),
     }),
+    // Position on the home page; unordered projects follow, oldest first.
+    order: z.number().optional(),
+    // Spans the full row on the home page.
+    featured: z.boolean().optional(),
     clip: z.string().optional(),
     poster: z.string().optional(),
   }),

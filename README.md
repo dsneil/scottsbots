@@ -20,6 +20,8 @@ One Markdown file per project in `src/content/projects/`. Schema: `src/content.c
 | `area` | markets / crypto / cards / home / money |
 | `link.kind` | `live` (open app) / `code` (public repo) / `soon` (repo going public) / `none` (clip only) |
 | `link.note` | Short caveat shown next to the link, e.g. "Login required" |
+| `order` | Home page position; projects without one follow, oldest first |
+| `featured` | `true` = full-width row on the home page |
 | `clip`, `poster` | Paths under `public/clips/`; omit for the "No signal" placeholder |
 
 ## Clips

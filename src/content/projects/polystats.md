@@ -1,5 +1,6 @@
 ---
-name: PolyStats
+name: PolyHolders
+order: 7
 built: 2026-02-03
 area: markets
 tagline: "A Chrome extension that shows who is holding each side of a Polymarket bet."

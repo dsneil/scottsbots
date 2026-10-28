@@ -1,5 +1,6 @@
 ---
-name: Wallet Tracker
+name: BiKnow
+order: 4
 built: 2026-08-13
 area: crypto
 tagline: "Live trades from a watchlist of Solana and EVM wallets, as they happen."

@@ -1,5 +1,7 @@
 ---
 name: ScottStats
+order: 1
+featured: true
 built: 2026-01-26
 area: markets
 tagline: "My trading dashboard — stock and crypto breakouts, refreshed every few minutes."

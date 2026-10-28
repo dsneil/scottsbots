@@ -5,8 +5,9 @@ import ProjectLink from '../components/ProjectLink.astro';
 import { getProjects, builtLabel, unitLabel, AREA_LABEL } from '../lib/projects';
 
 const projects = await getProjects();
-const first = projects[0].data.built;
-const last = projects[projects.length - 1].data.built;
+const dates = projects.map((p) => p.data.built.getTime());
+const first = new Date(Math.min(...dates));
+const last = new Date(Math.max(...dates));
 const span = `${first.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' }).toUpperCase()}–${builtLabel(last)}`;
 ---
 
@@ -40,25 +41,27 @@ const span = `${first.toLocaleDateString('en-US', { month: 'short', timeZone: 'U
     <ol class="grid gap-x-10 gap-y-16 lg:grid-cols-2">
       {
         projects.map((p, i) => (
-          <li class="group relative border-t border-line pt-3">
+          <li class:list={['group relative border-t border-line pt-3', p.data.featured && 'lg:col-span-2']}>
             <p class="label flex justify-between">
               <span>{unitLabel(i)}</span>
               <span>
                 {AREA_LABEL[p.data.area]} · {builtLabel(p.data.built)}
               </span>
             </p>
-            <div class="mt-3">
+            <div class:list={['mt-3', p.data.featured && 'lg:grid lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:gap-10']}>
               <Clip src={p.data.clip} poster={p.data.poster} name={p.data.name} />
-            </div>
-            <h2 class="dot mt-5 text-[1.7rem]">
-              <a href={`/p/${p.id}/`} class="after:absolute after:inset-0 after:content-[''] group-hover:underline group-hover:decoration-2 group-hover:underline-offset-4">
-                {p.data.name}
-              </a>
-            </h2>
-            <p class="mt-3 leading-relaxed">{p.data.tagline}</p>
-            <p class="label mt-3 normal-case tracking-normal">{p.data.stack.join(' / ')}</p>
-            <div class="mt-5">
-              <ProjectLink link={p.data.link} />
+              <div>
+                <h2 class:list={['dot mt-5 text-[1.7rem]', p.data.featured && 'lg:mt-0 lg:text-[2.6rem]']}>
+                  <a href={`/p/${p.id}/`} class="after:absolute after:inset-0 after:content-[''] group-hover:underline group-hover:decoration-2 group-hover:underline-offset-4">
+                    {p.data.name}
+                  </a>
+                </h2>
+                <p class:list={['mt-3 leading-relaxed', p.data.featured && 'lg:text-lg']}>{p.data.tagline}</p>
+                <p class="label mt-3 normal-case tracking-normal">{p.data.stack.join(' / ')}</p>
+                <div class="mt-5">
+                  <ProjectLink link={p.data.link} />
+                </div>
+              </div>
             </div>
           </li>
         ))

@@ -1,5 +1,6 @@
 ---
 name: fomo Wallet Matcher
+order: 5
 built: 2026-08-17
 area: crypto
 tagline: "A Chrome extension that shows the real wallets behind fomo traders."
