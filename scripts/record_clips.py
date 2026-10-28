@@ -15,6 +15,20 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / 'public' / 'clips'
 VIEWPORT = {'width': 1440, 'height': 900}  # 16:10, matches the clip frame
 
+# Headless video has no pointer; draw one so viewers can follow the clicks.
+CURSOR_JS = """
+window.addEventListener('DOMContentLoaded', () => {
+  const c = document.createElement('div');
+  c.style.cssText = 'position:fixed;z-index:2147483647;pointer-events:none;width:18px;height:18px;'
+    + 'margin:-9px 0 0 -9px;border:2px solid #fff;background:rgba(224,48,30,.85);'
+    + 'box-shadow:0 0 0 1px #000;left:-50px;top:-50px;transition:transform .12s';
+  document.body.appendChild(c);
+  addEventListener('mousemove', e => { c.style.left = e.clientX + 'px'; c.style.top = e.clientY + 'px'; }, true);
+  addEventListener('mousedown', () => { c.style.transform = 'scale(.6)'; }, true);
+  addEventListener('mouseup', () => { c.style.transform = 'scale(1)'; }, true);
+});
+"""
+
 
 def glide(page: Page, selector: str, steps: int = 25) -> None:
     """Move the mouse to an element in visible steps, then click it."""
@@ -24,25 +38,84 @@ def glide(page: Page, selector: str, steps: int = 25) -> None:
     page.locator(selector).first.click()
 
 
+def scroll_table_left(page: Page) -> None:
+    """Bring the table's horizontal scroll back to the name column."""
+    page.evaluate(
+        """() => {
+          let el = document.querySelector('table').parentElement;
+          while (el && el.scrollWidth <= el.clientWidth) el = el.parentElement;
+          if (el) el.scrollTo({ left: 0, behavior: 'smooth' });
+        }"""
+    )
+    page.wait_for_timeout(700)
+
+
+def first_rows(page: Page, col: int, n: int = 2) -> list[str]:
+    return page.eval_on_selector_all(
+        'tbody tr', f'rs => rs.slice(0, {n}).map(r => r.children[{col}].innerText.trim())'
+    )
+
+
+def pct(text: str) -> float:
+    try:
+        return float(text.replace('%', '').replace('+', ''))
+    except ValueError:
+        return float('-inf')
+
+
 def scottstats(page: Page) -> None:
-    page.goto('https://scott-stats.vercel.app/all', wait_until='networkidle')
+    # AI universe: map, highlights, research.
+    page.goto('https://scott-stats.vercel.app/ai/map', wait_until='networkidle')
+    page.wait_for_timeout(4000)
+    for tab in ['Highlights', 'Research']:
+        glide(page, f'a:text-is("{tab}")')
+        page.wait_for_load_state('networkidle')
+        page.wait_for_timeout(2500)
+        page.mouse.wheel(0, 400)
+        page.wait_for_timeout(1300)
+
+    # Universes menu: pause on each, then open All.
+    glide(page, 'button:has-text("Universes")')
+    page.wait_for_timeout(600)
+    for href in ['/ai', '/robotics', '/space', '/biotech', '/software', '/crypto']:
+        box = page.locator(f'a[href="{href}"]').first.bounding_box()
+        page.mouse.move(box['x'] + 30, box['y'] + box['height'] / 2, steps=10)
+        page.wait_for_timeout(1000)
+    glide(page, 'a[href="/all"]:has-text("All")')
+    page.wait_for_load_state('networkidle')
     page.wait_for_timeout(1500)
     close = page.locator('button:has-text("×")')
     if close.count():
         close.first.click()
-    page.wait_for_timeout(1200)
-    for name in ['Apple', 'Bitcoin', 'Micron Technology']:
-        glide(page, f'td:has-text("{name}")')
-        page.wait_for_timeout(2200)
-    glide(page, 'button:has-text("3m")')
-    page.wait_for_timeout(2200)
-    glide(page, 'button:has-text("1yr")')
-    page.wait_for_timeout(1500)
-    page.locator('input[placeholder="Search..."]').click()
-    page.keyboard.type('nvda', delay=140)
-    page.wait_for_timeout(1500)
-    glide(page, 'td:has-text("Nvidia")')
+
+    # Sort by 1D, biggest gainer first, open it.
+    one_d = 'th span.cursor-pointer:text-is("1D")'
+    glide(page, one_d)
+    page.wait_for_timeout(900)
+    top, second = first_rows(page, 8)
+    if pct(top) < pct(second):
+        page.locator(one_d).click()
+        page.wait_for_timeout(900)
+    scroll_table_left(page)
+    glide(page, 'tbody tr:nth-child(1) td:nth-child(5)')
     page.wait_for_timeout(2500)
+
+    # Sort by signal, strongest first, click through a few.
+    signal = 'th span.cursor-pointer:has-text("Signal")'
+    glide(page, signal)
+    page.wait_for_timeout(900)
+    if '★' not in first_rows(page, 2, 1)[0]:
+        page.locator(signal).first.click()
+        page.wait_for_timeout(900)
+    for row in (1, 2, 3):
+        glide(page, f'tbody tr:nth-child({row}) td:nth-child(5)')
+        page.wait_for_timeout(2000)
+
+    # Watchlist the open stock and set an alert at the current price.
+    glide(page, 'tbody tr:nth-child(3) input[type=checkbox]')
+    page.wait_for_timeout(1000)
+    glide(page, 'button:has-text("+ Add Alert")')
+    page.wait_for_timeout(3000)
 
 
 def magicstats(page: Page) -> None:
@@ -95,6 +168,7 @@ def main(slugs: list[str]) -> None:
         for slug in slugs:
             tmp = Path(tempfile.mkdtemp())
             ctx = browser.new_context(viewport=VIEWPORT, record_video_dir=str(tmp), record_video_size=VIEWPORT)
+            ctx.add_init_script(CURSOR_JS)
             page = ctx.new_page()
             FLOWS[slug](page)
             ctx.close()
