@@ -2,6 +2,9 @@
 
 Usage: python3 scripts/record_clips.py [slug ...]
 Writes public/clips/<slug>.mp4 and <slug>.jpg (poster).
+
+ScottStats ships Scott's own screen recording, so it is left out of the default
+run; pass `scottstats` explicitly to overwrite it with the scripted version.
 """
 import shutil
 import subprocess
@@ -180,4 +183,4 @@ def main(slugs: list[str]) -> None:
 
 
 if __name__ == '__main__':
-    main(sys.argv[1:] or list(FLOWS))
+    main(sys.argv[1:] or [s for s in FLOWS if s != 'scottstats'])
