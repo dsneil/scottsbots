@@ -2,13 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import Clip from '../components/Clip.astro';
 import ProjectLink from '../components/ProjectLink.astro';
-import { getProjects, builtLabel, unitLabel, AREA_LABEL } from '../lib/projects';
+import { getProjects, unitLabel, AREA_LABEL } from '../lib/projects';
 
 const projects = await getProjects();
-const dates = projects.map((p) => p.data.built.getTime());
-const first = new Date(Math.min(...dates));
-const last = new Date(Math.max(...dates));
-const span = `${first.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' }).toUpperCase()}–${builtLabel(last)}`;
 ---
 
 <Layout
@@ -19,20 +15,6 @@ const span = `${first.toLocaleDateString('en-US', { month: 'short', timeZone: 'U
     <section class="pt-16 pb-14">
       <h1 class="dot text-[clamp(2.6rem,9vw,5rem)]">scottsbots</h1>
       <p class="mt-6 max-w-xl leading-relaxed">Tools I’ve created to help me get stuff done.</p>
-      <dl class="mt-10 grid grid-cols-2 border-t border-l border-line sm:grid-cols-3">
-        <div class="border-r border-b border-line px-3 py-2">
-          <dt class="label">Units</dt>
-          <dd class="mt-1">{projects.length}</dd>
-        </div>
-        <div class="border-r border-b border-line px-3 py-2">
-          <dt class="label">Built</dt>
-          <dd class="mt-1">{span}</dd>
-        </div>
-        <div class="col-span-2 border-r border-b border-line px-3 py-2 sm:col-span-1">
-          <dt class="label">Online now</dt>
-          <dd class="mt-1">{projects.filter((p) => p.data.link.kind === 'live').length}</dd>
-        </div>
-      </dl>
     </section>
 
     <ol class="grid gap-x-10 gap-y-16 lg:grid-cols-2">
@@ -41,9 +23,7 @@ const span = `${first.toLocaleDateString('en-US', { month: 'short', timeZone: 'U
           <li class:list={['group relative border-t border-line pt-3', p.data.featured && 'lg:col-span-2']}>
             <p class="label flex justify-between">
               <span>{unitLabel(i)}</span>
-              <span>
-                {AREA_LABEL[p.data.area]} · {builtLabel(p.data.built)}
-              </span>
+              <span>{AREA_LABEL[p.data.area]}</span>
             </p>
             <div class:list={['mt-3', p.data.featured && 'lg:grid lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:gap-10']}>
               <Clip src={p.data.clip} poster={p.data.poster} name={p.data.name} />

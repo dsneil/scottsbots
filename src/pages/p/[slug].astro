@@ -3,7 +3,7 @@ import { render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Clip from '../../components/Clip.astro';
 import ProjectLink from '../../components/ProjectLink.astro';
-import { getProjects, builtLabel, unitLabel, AREA_LABEL, type Project } from '../../lib/projects';
+import { getProjects, unitLabel, AREA_LABEL, type Project } from '../../lib/projects';
 
 export async function getStaticPaths() {
   const projects = await getProjects();
@@ -43,10 +43,6 @@ const { Content } = await render(project);
       </article>
       <div class="h-fit">
         <dl class="border-t border-l border-line text-sm">
-          <div class="flex justify-between gap-4 border-r border-b border-line px-3 py-2">
-            <dt class="label">Built</dt>
-            <dd>{builtLabel(data.built)}</dd>
-          </div>
           <div class="flex justify-between gap-4 border-r border-b border-line px-3 py-2">
             <dt class="label">Area</dt>
             <dd>{AREA_LABEL[data.area]}</dd>
