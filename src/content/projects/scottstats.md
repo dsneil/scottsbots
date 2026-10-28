@@ -4,7 +4,7 @@ order: 1
 featured: true
 built: 2026-01-26
 area: markets
-tagline: "My trading dashboard — stock and crypto breakouts, refreshed every few minutes."
+tagline: "My trading dashboard. Realtime charting, analysis, breakout alerts. Covers custom universes for AI, Robotics, Crypto, more."
 stack: [React, Vercel Functions, Turso, QStash, ECharts]
 link: { kind: live, url: "https://scott-stats.vercel.app" }
 clip: /clips/scottstats.mp4
