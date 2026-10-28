@@ -5,6 +5,8 @@ area: markets
 tagline: "My trading dashboard — stock and crypto breakouts, refreshed every few minutes."
 stack: [React, Vercel Functions, Turso, QStash, ECharts]
 link: { kind: live, url: "https://scott-stats.vercel.app" }
+clip: /clips/scottstats.mp4
+poster: /clips/scottstats.jpg
 ---
 A scanner and charting app built around one swing-trading strategy. Quotes and
 candles refresh every 3 minutes during the US session and less often overnight,

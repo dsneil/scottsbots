@@ -41,12 +41,23 @@ const { src, poster, name } = Astro.props;
 </style>
 
 <script>
-  // Reduced motion: stop autoplay and hand control to the viewer.
+  const videos = document.querySelectorAll<HTMLVideoElement>('.clip video');
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.querySelectorAll<HTMLVideoElement>('.clip video').forEach((v) => {
+    // Reduced motion: stop autoplay and hand control to the viewer.
+    videos.forEach((v) => {
       v.pause();
       v.removeAttribute('autoplay');
       v.controls = true;
     });
+  } else {
+    // Play only while on screen; also covers browsers that skip the autoplay attribute.
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        const v = e.target as HTMLVideoElement;
+        if (e.isIntersecting) v.play().catch(() => (v.controls = true));
+        else v.pause();
+      }
+    });
+    videos.forEach((v) => io.observe(v));
   }
 </script>

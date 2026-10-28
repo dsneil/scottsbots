@@ -5,6 +5,8 @@ area: cards
 tagline: "Price history and scores for sealed Magic: The Gathering products."
 stack: [Python, Postgres, Next.js, Drizzle, Recharts]
 link: { kind: live, url: "https://magicthestats.vercel.app" }
+clip: /clips/magicstats.mp4
+poster: /clips/magicstats.jpg
 ---
 A daily pipeline collects sealed-product prices and card data, builds a catalog,
 and scores each set as a long-term hold. The dashboard shows the results.
