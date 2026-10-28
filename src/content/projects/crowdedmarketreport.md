@@ -2,7 +2,7 @@
 name: CMR Scorecard
 built: 2026-10-26
 area: markets
-tagline: "500+ market videos and reports turned into calls plotted on the charts."
+tagline: "500+ market videos and reports turned into calls, easily viewable on respective charts."
 stack: [Python, Claude Sonnet, Yahoo Finance, ECharts]
 link: { kind: none, note: "Private · built on member-only content" }
 clip: /clips/crowdedmarketreport.mp4
