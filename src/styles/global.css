@@ -124,6 +124,15 @@ body {
   color: var(--dim);
 }
 
+.prose-bot a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose-bot a:hover {
+  text-decoration-thickness: 2px;
+}
+
 .prose-bot code {
   font-size: 0.9em;
 }
