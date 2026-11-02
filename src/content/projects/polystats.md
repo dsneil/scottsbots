@@ -8,7 +8,7 @@ stack: [TypeScript, Chrome Extension MV3, Goldsky subgraphs, IndexedDB]
 link: { kind: soon }
 clip: /clips/polystats.mp4
 poster: /clips/polystats.jpg
-posterY: "70%"
+posterY: "90%"
 ---
 Polymarket surfaces very little about who holds each market, and there is much
 to glean from knowing who is on which side of each position. This extension
