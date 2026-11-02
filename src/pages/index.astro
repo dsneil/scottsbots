@@ -26,7 +26,7 @@ const projects = await getProjects();
               <span>{AREA_LABEL[p.data.area]}</span>
             </p>
             <div class:list={['mt-3', p.data.featured && 'lg:grid lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:gap-10']}>
-              <Clip src={p.data.clip} poster={p.data.poster} name={p.data.name} />
+              <Clip src={p.data.clip} poster={p.data.poster} posterY={p.data.posterY} name={p.data.name} />
               <div>
                 <h2 class:list={['dot mt-5 text-[1.7rem]', p.data.featured && 'lg:mt-0 lg:text-[2.6rem]']}>
                   <a href={`/p/${p.id}/`} class="after:absolute after:inset-0 after:content-[''] group-hover:underline group-hover:decoration-2 group-hover:underline-offset-4">

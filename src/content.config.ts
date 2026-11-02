@@ -21,6 +21,8 @@ const projects = defineCollection({
     featured: z.boolean().optional(),
     clip: z.string().optional(),
     poster: z.string().optional(),
+    // Vertical crop of the home-page still, e.g. "45%"; defaults to the top.
+    posterY: z.string().optional(),
   }),
 });
 

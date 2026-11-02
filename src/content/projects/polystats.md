@@ -6,6 +6,9 @@ area: markets
 tagline: "A Chrome extension that shows who is holding each side of a Polymarket bet."
 stack: [TypeScript, Chrome Extension MV3, Goldsky subgraphs, IndexedDB]
 link: { kind: soon }
+clip: /clips/polystats.mp4
+poster: /clips/polystats.jpg
+posterY: "70%"
 ---
 Polymarket shows prices and an order book but not who holds the positions. This
 extension adds a Holders panel to every market page, styled to match the site.

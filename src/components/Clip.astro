@@ -2,19 +2,21 @@
 interface Props {
   src?: string;
   poster?: string;
+  /** Vertical crop of the still, e.g. "45%"; defaults to the top. */
+  posterY?: string;
   name: string;
   /** still = poster only (index cards); play = the video, started on arrival (project page). */
   mode?: 'still' | 'play';
 }
 
-const { src, poster, name, mode = 'still' } = Astro.props;
+const { src, poster, posterY = 'top', name, mode = 'still' } = Astro.props;
 ---
 
 {
   mode === 'play' && src ? (
-    <div class="clip border border-line bg-panel">
+    <div class="clip mx-auto w-fit max-w-full border border-line bg-panel">
       <video
-        class="block h-auto w-full"
+        class="block h-auto max-h-[85vh] w-auto max-w-full"
         src={src}
         poster={poster}
         muted
@@ -28,7 +30,14 @@ const { src, poster, name, mode = 'still' } = Astro.props;
   ) : (
     <div class="relative aspect-[16/10] overflow-hidden border border-line bg-panel">
       {poster ? (
-        <img class="h-full w-full object-cover object-top" src={poster} alt={`${name} screenshot`} loading="lazy" decoding="async" />
+        <img
+          class="h-full w-full object-cover"
+          style={`object-position: center ${posterY}`}
+          src={poster}
+          alt={`${name} screenshot`}
+          loading="lazy"
+          decoding="async"
+        />
       ) : (
         <div class="scan flex h-full w-full items-center justify-center">
           <span class="label">No signal</span>
