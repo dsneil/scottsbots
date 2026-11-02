@@ -10,10 +10,11 @@ clip: /clips/polystats.mp4
 poster: /clips/polystats.jpg
 posterY: "70%"
 ---
-Polymarket shows prices and an order book but not who holds the positions. This
-extension adds a Holders panel to every market page, styled to match the site.
+Polymarket surfaces very little about who holds each market, and there is much
+to glean from knowing who is on which side of each position. This extension
+shows aggregated holder information inline, plus their trades on the chart, to
+give insight into each trader's positions. Tooltips surface profile stats to
+show their historical performance at a glance.
 
-- Top YES and NO holders with position size in USDC
-- Average entry price for each holder, from Polymarket's public PnL subgraph
-- Hover a holder to see their profile and stats
-- Private wallet tags, stored only in your browser
+- Top holders in each market, with position side and trades on the chart
+- Holder trade stats and historical PnL
