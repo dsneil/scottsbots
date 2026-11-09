@@ -4,7 +4,6 @@ order: 6
 built: 2026-08-17
 area: crypto
 tagline: "A Chrome extension that shows the real wallets behind fomo traders."
-stack: [JavaScript, Chrome Extension MV3, Chainbase, Helius, Blockscout]
 link: { kind: none, note: Private extension }
 clip: /clips/fomo-wallet-surfacer.mp4
 poster: /clips/fomo-wallet-surfacer.jpg

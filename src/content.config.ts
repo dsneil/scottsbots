@@ -8,7 +8,6 @@ const projects = defineCollection({
     built: z.coerce.date(),
     area: z.enum(['markets', 'crypto', 'cards', 'home', 'money']),
     tagline: z.string(),
-    stack: z.array(z.string()),
     // live = open the running product; code = public repo; soon = repo going public; none = clip only
     link: z.object({
       kind: z.enum(['live', 'code', 'soon', 'none']),

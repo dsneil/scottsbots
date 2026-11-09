@@ -4,7 +4,6 @@ order: 2
 built: 2026-08-13
 area: crypto
 tagline: "Realtime blockchain transaction tracker for curated set of 1000+ wallets, processing thousands of txns/day."
-stack: [Next.js, Supabase Realtime, Helius webhooks, Tailwind]
 link: { kind: live, url: "https://wallettrackerapp.vercel.app", note: Login required }
 ---
 Add wallets to a watchlist and their on-chain activity shows up in a live feed

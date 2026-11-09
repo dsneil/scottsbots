@@ -4,7 +4,6 @@ order: 7
 built: 2026-02-03
 area: markets
 tagline: "A Chrome extension that shows who is holding each side of a Polymarket bet."
-stack: [TypeScript, Chrome Extension MV3, Goldsky subgraphs, IndexedDB]
 link: { kind: soon }
 clip: /clips/polystats.mp4
 poster: /clips/polystats.jpg

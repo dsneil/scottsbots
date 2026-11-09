@@ -5,7 +5,6 @@ featured: true
 built: 2026-01-26
 area: markets
 tagline: "Realtime charting, analysis, breakout alerts. Covers custom universes for AI, Robotics, Crypto, more."
-stack: [React, Vercel Functions, Turso, QStash, ECharts]
 link: { kind: live, url: "https://scott-stats.vercel.app" }
 clip: /clips/scottstats.mp4
 poster: /clips/scottstats.jpg

@@ -4,8 +4,7 @@ order: 9
 built: 2026-07-28
 area: crypto
 tagline: "Paste a Solana wallet and find the other wallets the same person controls."
-stack: [Next.js, Solana RPC]
-link: { kind: live, url: "https://wallet-matcher.vercel.app" }
+link: { kind: none, note: "No public link" }
 ---
 Starting from one address, or a set you believe belong together, it walks the
 transaction graph and ranks connected wallets by how likely each one is to be a

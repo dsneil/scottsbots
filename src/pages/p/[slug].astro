@@ -47,10 +47,6 @@ const { Content } = await render(project);
             <dt class="label">Area</dt>
             <dd>{AREA_LABEL[data.area]}</dd>
           </div>
-          <div class="border-r border-b border-line px-3 py-2">
-            <dt class="label">Stack</dt>
-            <dd class="mt-1 leading-relaxed">{data.stack.join(' / ')}</dd>
-          </div>
         </dl>
         <div class="mt-5">
           <ProjectLink link={data.link} />

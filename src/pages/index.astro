@@ -34,7 +34,6 @@ const projects = await getProjects();
                   </a>
                 </h2>
                 <p class:list={['mt-3 leading-relaxed', p.data.featured && 'lg:text-lg']}>{p.data.tagline}</p>
-                <p class="label mt-3 normal-case tracking-normal">{p.data.stack.join(' / ')}</p>
                 <div class="mt-5">
                   <ProjectLink link={p.data.link} />
                 </div>

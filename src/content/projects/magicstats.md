@@ -4,7 +4,6 @@ order: 4
 built: 2026-10-21
 area: cards
 tagline: "Price history, sales data, and market depth on all sealed Magic sets. Sentiment analysis from 500+ videos."
-stack: [Python, Postgres, Next.js, Drizzle, Recharts]
 link: { kind: live, url: "https://magicthestats.vercel.app" }
 clip: /clips/magicstats.mp4
 poster: /clips/magicstats.jpg

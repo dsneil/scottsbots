@@ -4,7 +4,6 @@ order: 10
 built: 2026-01-12
 area: money
 tagline: "One view of every brokerage account, built from pasted text and screenshots."
-stack: [Python, Tesseract OCR, encrypted SQLite]
 link: { kind: none, note: Runs locally on personal data }
 ---
 Brokerages don't share a common export, so this takes whatever each one gives:
