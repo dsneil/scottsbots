@@ -16,7 +16,7 @@ export interface Employer {
   roles: Role[];
 }
 
-export const SINCE_2021: { label: string; text: string }[] = [
+export const SINCE_2022: { label: string; text: string }[] = [
   {
     label: 'Personal projects',
     text: 'Designed, built and shipped 9 tools end to end: market dashboards, Chrome extensions, on-chain analytics and market-data pipelines, several running daily.',
@@ -38,7 +38,7 @@ export const SINCE_2021: { label: string; text: string }[] = [
 export const EXPERIENCE: Employer[] = [
   {
     org: 'Self-employed',
-    dates: '2021 – Present',
+    dates: '2022 – Present',
     roles: [
       {
         title: 'Contract ML Engineer',
@@ -54,7 +54,7 @@ export const EXPERIENCE: Employer[] = [
       {
         title: 'Personal projects',
         team: 'scottsbots',
-        dates: '2021 – Present',
+        dates: '2022 – Present',
         bullets: [
           'MagicStats: daily pipeline over 243 sealed Magic sets and 3,100+ products from 6 sources, plus LLM extraction of 7,100 market calls from 700+ videos.',
           'BiKnow: real-time tracker of 1,000+ curated Solana wallets processing thousands of transactions a day; WalletMatcher clusters wallets the same person controls.',
@@ -63,7 +63,7 @@ export const EXPERIENCE: Employer[] = [
       },
       {
         title: 'Investing & trading',
-        dates: '2021 – Present',
+        dates: '2022 – Present',
         bullets: [
           'ScottStats: real-time charting and breakout alerts over custom universes, including 500+ AI stocks across 20+ subsectors.',
           'Distilled a breakout strategy from a transcribed playlist of trading videos, with every rule cited to a quote and timestamp, then backtested and ported it into ScottStats.',
