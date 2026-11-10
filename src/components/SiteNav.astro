@@ -1,0 +1,23 @@
+---
+// Project pages count as Units.
+const onResume = Astro.url.pathname.startsWith('/resume');
+const tabs = [
+  { href: '/', label: 'Units', active: !onResume },
+  { href: '/resume/', label: 'Resume', active: onResume },
+];
+---
+
+<nav class="label flex gap-6 pt-6 print:hidden" aria-label="Site">
+  {
+    tabs.map((t) => (
+      <a
+        href={t.href}
+        aria-current={t.active ? 'page' : undefined}
+        class:list={['flex items-center gap-2 hover:text-ink', t.active && 'text-ink']}
+      >
+        <span class:list={['inline-block h-2 w-2', t.active ? 'bg-led' : 'border border-line']} aria-hidden="true" />
+        {t.label}
+      </a>
+    ))
+  }
+</nav>

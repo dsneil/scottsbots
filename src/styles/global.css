@@ -136,3 +136,24 @@ body {
 .prose-bot code {
   font-size: 0.9em;
 }
+
+/* Browser "Save as PDF": black on white whatever the theme, tighter type. */
+@media print {
+  :root,
+  :root:not([data-theme="light"]),
+  :root[data-theme="dark"] {
+    --case: #ffffff;
+    --ink: #000000;
+    --dim: #4a4a46;
+    --line: #000000;
+    --panel: #ffffff;
+  }
+
+  @page {
+    margin: 14mm 14mm;
+  }
+
+  html {
+    font-size: 10.5px;
+  }
+}
