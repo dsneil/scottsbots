@@ -80,7 +80,7 @@ export const EXPERIENCE: Employer[] = [
       {
         title: 'AI Product Manager',
         team: 'Messenger Business AI',
-        dates: 'Jun 2018 – Jun 2021',
+        dates: '2018 – 2021',
         bullets: [
           'Click-to-Message ads: grew revenue and adoption by improving ad delivery and models, driving more business outcomes in Messenger.',
           'Quality and integrity: reduced bad and policy-violating ads across Messenger and Click-to-Message.',
@@ -91,13 +91,13 @@ export const EXPERIENCE: Employer[] = [
       {
         title: 'Data Scientist, Analytics',
         team: 'Instagram Core Business',
-        dates: 'Feb 2017 – Jun 2018',
+        dates: '2017 – 2018',
         bullets: ['Growth, Insights, API and Discovery.'],
       },
       {
         title: 'Data Scientist, Analytics',
         team: 'Facebook Videos',
-        dates: 'Aug 2014 – Feb 2017',
+        dates: '2014 – 2017',
         bullets: [
           'Led experiment design, evaluation and decisions on new Videos products; informed changes that helped grow Videos to 5B+ daily views.',
           'Covered Performance, Live, Suggested Videos and Facebook Watch.',
