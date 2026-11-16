@@ -80,6 +80,7 @@ consulting, Personal projects).
 
 ## Earlier one-liners
 
+- AI PM Growth bullet (commit `e4937d4`): "Growth: increased business outcomes from person-to-business conversations, feeding better models and more valuable conversations."
 - Startup consulting (commit `b4a12f7`): "Iterated on the internal data engine (labeling and training tooling) to speed up dataset creation and labeling."
 - Personal projects closer (commit `3f3a8ec`): "Common thread: finding datasets and YouTube video catalogs and turning them into actionable tools."
 - Facebook Videos bullet (commit `e4d5208`): "Scaled the engineering team’s analysis through tooling, education and mentoring as the team grew 4x."
