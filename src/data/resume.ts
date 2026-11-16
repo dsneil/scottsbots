@@ -13,6 +13,8 @@ export interface Employer {
   org: string;
   place?: string;
   dates: string;
+  // Labeled bullets directly under the employer, for entries without separate roles.
+  bullets?: { lead: string; text: string }[];
   roles: Role[];
 }
 
@@ -39,48 +41,25 @@ export const EXPERIENCE: Employer[] = [
   {
     org: 'Self-employed',
     dates: '2022 – Present',
-    roles: [
+    bullets: [
       {
-        title: 'Contract ML Engineer',
-        team: 'VAWN · AI electrical blueprint analysis',
-        dates: '2026',
-        bullets: [
-          'Built fire-alarm device detection on construction drawings from zero: dataset, three model generations, tiled inference, false-positive filtering and the production pipeline. Locked-test F1 0.849; an unseen project scored 41 of 43 devices with zero false positives.',
-          'Unified panels detected from single-line diagrams, schedule tables and floor plans into one record with per-field source authority. Breaker extraction rose from 0.596 to 0.872; every cross-source disagreement is logged as one of 19 issue types.',
-          'Built labeling tools (template-match proposals, legend viewer, one-click box correction) that cut cross-class false positives from 54 per run to 0.',
-          'Shipped chat answers that jump to the referenced panel on the drawing, and an upload flow that runs only the disciplines requested. 381 commits.',
-        ],
+        lead: 'Social media',
+        text: 'Work with my wife (@fashionbyally, 1.5M+ followers across platforms) on content creation: strategy, video concepting, videography and photography. Partnered with global brands including Amazon, Apple, Waymo/Google, Air France and Four Seasons Hotels. Authored a travel guide that sold hundreds of copies and drove thousands of newsletter subscribers.',
       },
       {
-        title: 'Personal projects',
-        team: 'scottsbots',
-        dates: '2022 – Present',
-        bullets: [
-          'MagicStats: daily pipeline over 243 sealed Magic sets and 3,100+ products from 6 sources, plus LLM extraction of 7,100 market calls from 700+ videos.',
-          'BiKnow: real-time tracker of 1,000+ curated Solana wallets processing thousands of transactions a day; WalletMatcher clusters wallets the same person controls.',
-          'PolyHolders and fomo Wallet Matcher: Chrome extensions that surface who holds each side of a Polymarket bet and the real wallets behind fomo traders.',
-        ],
+        lead: 'Trading & crypto',
+        text: 'Traded and experimented extensively across stocks and crypto, supported by custom research tools I built.',
       },
       {
-        title: 'Investing & trading',
-        dates: '2022 – Present',
-        bullets: [
-          'ScottStats: real-time charting and breakout alerts over custom universes, including 500+ AI stocks across 20+ subsectors.',
-          'Distilled a breakout strategy from a transcribed playlist of trading videos, with every rule cited to a quote and timestamp, then backtested and ported it into ScottStats.',
-          'CMR Scorecard: turned 500+ market videos and reports into calls plotted on their charts.',
-        ],
+        lead: 'Startup consulting',
+        text: 'Trained ML models and built extraction pipelines that turn raw building plans into structured data for pre-construction planning. Iterated on the internal data engine (labeling and training tooling) to speed up dataset creation and labeling. Improved data models and chat functionality for a better user experience.',
       },
       {
-        title: 'Social media',
-        team: '@fashionbyally',
-        dates: '2022 – Present',
-        bullets: [
-          'Work with my wife (@fashionbyally, 1.5M+ followers across platforms) on content creation: strategy, video concepting, videography and photography.',
-          'Partnered with global brands including Amazon, Apple, Waymo/Google, Air France and Four Seasons Hotels.',
-          'Authored a travel guide that sold hundreds of copies and drove thousands of newsletter subscribers.',
-        ],
+        lead: 'Personal projects',
+        text: 'Built a wide range of projects for trading, crypto and Magic: The Gathering cards, some shared at scottsbots.vercel.app. Common thread: finding datasets and YouTube video catalogs and turning them into actionable tools.',
       },
     ],
+    roles: [],
   },
   {
     org: 'Facebook',

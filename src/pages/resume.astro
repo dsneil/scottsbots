@@ -46,6 +46,15 @@ import { LINKEDIN_URL, SINCE_2022, EXPERIENCE, EDUCATION } from '../data/resume'
                 {e.place && <span> · {e.place}</span>}
               </p>
             </header>
+            {e.bullets && (
+              <ul class="bullets mt-3 border-l border-line pl-4 sm:pl-6">
+                {e.bullets.map((b) => (
+                  <li>
+                    <span class="font-semibold">{b.lead}:</span> {b.text}
+                  </li>
+                ))}
+              </ul>
+            )}
             {e.roles.map((r) => (
               <div class="role mt-5 border-l border-line pl-4 sm:pl-6 print:mt-2">
                 <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
