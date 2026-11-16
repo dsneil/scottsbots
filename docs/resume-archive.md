@@ -80,6 +80,8 @@ consulting, Personal projects).
 
 ## Earlier one-liners
 
+- Facebook Videos scale (commit `92a886b`): "…informed changes that helped grow Videos to 5B+ daily views." (5B+ came from the Sept 2015 resume; public reports had 8B by Nov 2015.)
+- Instagram Core Business (commit `92a886b`): single bullet "Growth, Insights, API and Discovery." before the API / Insights / pipelines bullets were added.
 - AI PM quality bullets (commit `2f6bc37`): "Quality/Integrity: reduced bad and policy-violating ads across Messenger and Click-to-Message." and "Lead cross-company work to drive project alignment and consistently reduce bad and policy-violating ad experiences in Messenger and Click-to-Message ads."
 - AI PM Growth bullet (commit `e4937d4`): "Growth: increased business outcomes from person-to-business conversations, feeding better models and more valuable conversations."
 - Startup consulting (commit `b4a12f7`): "Iterated on the internal data engine (labeling and training tooling) to speed up dataset creation and labeling."

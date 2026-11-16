@@ -61,14 +61,19 @@ export const EXPERIENCE: Employer[] = [
         title: 'Data Scientist, Analytics',
         team: 'Instagram Core Business',
         dates: 'Feb 2017 – Jun 2018',
-        bullets: ['Growth, Insights, API and Discovery.'],
+        bullets: [
+          'Growth, Insights, API and Discovery.',
+          'Handled sensitive analytics projects around the Instagram API through a complex regulatory environment following Cambridge Analytica.',
+          'Researched and prioritized projects to help businesses grow on Instagram through improved Insights and account tips.',
+          'Built pipelines and dashboards, filling in gaps for Data Engineering.',
+        ],
       },
       {
         title: 'Data Scientist, Analytics',
         team: 'Facebook Videos',
         dates: 'Aug 2014 – Feb 2017',
         bullets: [
-          'Led experiment design, evaluation and decisions on new Videos products; informed changes that helped grow Videos to 5B+ daily views.',
+          'Led experiment design, evaluation and decisions on new Videos products; informed changes that helped grow Videos to 10B+ daily views.',
           'Covered Performance, Live, Suggested Videos and Facebook Watch.',
           'Scaled analysis capacity via tooling, education and mentoring as the engineering team grew 4x.',
           'Worked with Data Engineering on datasets, metrics, logging validation and dashboards.',
