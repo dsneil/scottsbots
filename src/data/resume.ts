@@ -1,6 +1,8 @@
 // Resume copy. Sources: LinkedIn experience, the 2015 resume, and each project's repo; no invented numbers.
 
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/dsneil/';
+export const SITE_HOST = 'scottsbots.xyz';
+export const SITE_URL = `https://${SITE_HOST}/`;
 
 export interface Role {
   title: string;
@@ -37,7 +39,7 @@ export const EXPERIENCE: Employer[] = [
       },
       {
         lead: 'Personal projects',
-        text: 'Built a wide range of projects for trading, crypto and sealed MTG, some shared at scottsbots.vercel.app. Theme across some projects is finding datasets and YouTube video catalogs and turning them into actionable tools.',
+        text: 'Built a wide range of projects for trading, crypto and sealed MTG, some shared at scottsbots.xyz. Theme across some projects is finding datasets and YouTube video catalogs and turning them into actionable tools.',
       },
     ],
     roles: [],

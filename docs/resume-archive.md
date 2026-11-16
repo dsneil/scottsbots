@@ -1,7 +1,7 @@
 # Resume archive
 
 Retired resume copy, kept for rollback and for pulling ideas back in. Live copy lives in
-`src/data/resume.ts`; the page is `src/pages/resume.astro` (scottsbots.vercel.app/resume/).
+`src/data/resume.ts`; the page is `src/pages/resume.astro` (scottsbots.xyz/resume/).
 
 Rollback a whole version: `git checkout <commit> -- src/data/resume.ts`, then build and push.
 
@@ -81,6 +81,7 @@ consulting, Personal projects).
 ## Earlier one-liners
 
 - Facebook Videos scale (commit `92a886b`): "…informed changes that helped grow Videos to 5B+ daily views." (5B+ came from the Sept 2015 resume; public reports had 8B by Nov 2015.)
+- Site URL (commit `c481b09`): header print line "scottsbots.vercel.app" (plain text) → "Website ↗" link; Personal projects "scottsbots.vercel.app" → scottsbots.xyz link.
 - Brand sentence (commit `247d3cb`): "Partnered with global brands such as Amazon, Apple, Waymo/Google, Four Seasons, United Airlines, and more."
 - Social media opener (commit `99d39b3`): "Work with my wife (@fashionbyally, …)". Changed to "partner" for tech applications. Unused alt: "Co-run @fashionbyally (1.5M+ followers across platforms), a content business: …"
 - Facebook Videos team growth (commit `70cf58c`): "…as the engineering team grew 5x+."
