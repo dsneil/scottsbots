@@ -81,7 +81,7 @@ export const EXPERIENCE: Employer[] = [
         title: 'Product Analyst Intern',
         team: 'Facebook Groups',
         dates: '2013',
-        bullets: ['Sized and prioritized growth opportunities for Groups; defined metrics and built pipelines for ongoing analysis.'],
+        bullets: ['Sized and prioritized growth opportunities for Groups, regularly sharing work with senior leadership. Defined metrics, built pipelines and dashboards to support team’s analysis.'],
       },
     ],
   },

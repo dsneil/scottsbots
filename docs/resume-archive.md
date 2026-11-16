@@ -81,6 +81,7 @@ consulting, Personal projects).
 ## Earlier one-liners
 
 - Facebook Videos scale (commit `92a886b`): "…informed changes that helped grow Videos to 5B+ daily views." (5B+ came from the Sept 2015 resume; public reports had 8B by Nov 2015.)
+- Groups intern (commit `44647ff`): "Sized and prioritized growth opportunities for Groups; defined metrics and built pipelines for ongoing analysis."
 - Instagram first bullet (removed after `edcfb3e`): "Growth, Insights, API and Discovery."
 - AI PM last bullet (removed after `edcfb3e`): "Also covered privacy for Messenger Business AI."
 - Job-posting keyword pass (last version before it: `e606aeb`):
