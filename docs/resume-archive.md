@@ -81,6 +81,7 @@ consulting, Personal projects).
 ## Earlier one-liners
 
 - Facebook Videos scale (commit `92a886b`): "…informed changes that helped grow Videos to 5B+ daily views." (5B+ came from the Sept 2015 resume; public reports had 8B by Nov 2015.)
+- Personal projects (commit `0d2da12`): "…sealed MTG, some shared at scottsbots.xyz."
 - Site URL (commit `c481b09`): header print line "scottsbots.vercel.app" (plain text) → "Website ↗" link; Personal projects "scottsbots.vercel.app" → scottsbots.xyz link.
 - Brand sentence (commit `247d3cb`): "Partnered with global brands such as Amazon, Apple, Waymo/Google, Four Seasons, United Airlines, and more."
 - Social media opener (commit `99d39b3`): "Work with my wife (@fashionbyally, …)". Changed to "partner" for tech applications. Unused alt: "Co-run @fashionbyally (1.5M+ followers across platforms), a content business: …"

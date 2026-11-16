@@ -45,7 +45,7 @@ export const EXPERIENCE: Employer[] = [
       },
       {
         lead: 'Personal projects',
-        text: 'Built a wide range of projects for trading, crypto and sealed MTG, some shared at scottsbots.xyz. Theme across some projects is finding datasets and YouTube video catalogs and turning them into actionable tools.',
+        text: 'Built a wide range of projects for trading, crypto and sealed MTG, examples at scottsbots.xyz. Theme across some projects is finding datasets and YouTube video catalogs and turning them into actionable tools.',
       },
     ],
     roles: [],
