@@ -72,7 +72,7 @@ export const EXPERIENCE: Employer[] = [
         dates: 'Aug 2014 – Feb 2017',
         bullets: [
           'Led analytics for Performance, Live, Suggested Videos and Facebook Watch; informed changes that helped grow Videos to 10B+ daily views.',
-          'Defined core metrics and ran A/B test design, evaluation and ship decisions on new Videos products.',
+          'Defined core metrics, ran A/B test design, evaluation and ship decisions on new Videos products.',
           'Scaled analysis capacity through pipelines/dashboards, tooling, education and mentoring as the engineering team grew 4x.',
         ],
       },
