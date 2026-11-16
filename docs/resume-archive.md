@@ -81,6 +81,7 @@ consulting, Personal projects).
 ## Earlier one-liners
 
 - Facebook Videos scale (commit `92a886b`): "…informed changes that helped grow Videos to 5B+ daily views." (5B+ came from the Sept 2015 resume; public reports had 8B by Nov 2015.)
+- Facebook Videos bullets 1–2 (commit `01f874a`): "Through my tenure, led analytics for Performance, Live, Suggested Videos and Facebook Watch." / "Led A/B test design, evaluation and ship decisions on new Videos products; informed changes that helped grow Videos to 10B+ daily views."
 - Facebook Videos second bullet (commit `31d92d4`): "Covered Performance, Live, Suggested Videos and Facebook Watch."
 - Instagram API bullet (commit `d37d88b`, was first IG bullet): "Handled sensitive analytics projects around the Instagram API through a complex regulatory environment following Cambridge Analytica."
 - Ads Optimization variant tried and reverted (commit `3d7a6a0`): "grew revenue and business transactions in Messenger…"; live copy back to "business outcomes".
