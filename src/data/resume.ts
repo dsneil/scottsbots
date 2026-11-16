@@ -51,7 +51,7 @@ export const EXPERIENCE: Employer[] = [
         team: 'Messenger Business AI',
         dates: 'Jun 2018 – Jun 2021',
         bullets: [
-          'Click-to-Message ads: grew revenue and adoption by improving ad delivery and models, driving more business outcomes in Messenger. Led project for future version of CTM ads optimization, partnering closely with privacy, legal, and policy to deliver a compliant strategy.',
+          'Ads Optimization: grew revenue and adoption by improving ad delivery and models, driving more business outcomes in Messenger. Led project for future version of CTM ads optimization, partnering closely with privacy, legal, and policy to deliver a compliant strategy.',
           'Quality/Integrity: drove cross-company workstream, aligning group leads, and consistently reducing bad and policy-violating ad experiences in Messenger and Click-to-Message ads.',
           'Growth: built person-to-business messaging tools, additionally increasing outcomes and feeding back into model improvements.',
           'Also covered privacy for Messenger Business AI.',
