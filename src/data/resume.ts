@@ -12,7 +12,7 @@ export interface Role {
 export interface Employer {
   org: string;
   place?: string;
-  dates: string;
+  dates?: string;
   // Labeled bullets directly under the employer, for entries without separate roles.
   bullets?: { lead: string; text: string }[];
   roles: Role[];
@@ -75,43 +75,16 @@ export const EXPERIENCE: Employer[] = [
           'Worked with Data Engineering on datasets, metrics, logging validation and dashboards.',
         ],
       },
-      {
-        title: 'Product Analyst Intern',
-        team: 'Facebook Groups',
-        dates: '2013',
-        bullets: ['Identified and prioritized growth opportunities for Groups; defined metrics and built pipelines for ongoing analysis.'],
-      },
     ],
   },
   {
-    org: 'Periscope Capital',
-    place: 'Toronto, ON',
-    dates: '2012 – 2013',
-    roles: [
-      {
-        title: 'Investment Assistant / Technical Lead',
-        dates: '2012 – 2013',
-        bullets: [
-          'Architected and built the internal accounting system; started the move to technology-centric operations.',
-          'Analyzed and improved the automated trading system.',
-        ],
-      },
+    org: 'Other',
+    bullets: [
+      { lead: 'Facebook', text: 'Product Analyst Intern, Groups · 2013' },
+      { lead: 'Periscope Capital', text: 'Investment Assistant / Technical Lead · 2012 – 2013' },
+      { lead: 'BMO Capital Markets', text: 'Fixed Income / Money Market Trading Analyst · 2012' },
     ],
-  },
-  {
-    org: 'BMO Capital Markets',
-    place: 'Toronto, ON',
-    dates: '2012',
-    roles: [
-      {
-        title: 'Fixed Income / Money Market Trading Analyst',
-        dates: '2012',
-        bullets: [
-          'Co-developed and released a new money-market trading platform.',
-          'Built the foundation for a real-time system delivering market and trade data to traders.',
-        ],
-      },
-    ],
+    roles: [],
   },
 ];
 

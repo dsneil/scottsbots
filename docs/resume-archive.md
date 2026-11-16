@@ -5,6 +5,21 @@ Retired resume copy, kept for rollback and for pulling ideas back in. Live copy 
 
 Rollback a whole version: `git checkout <commit> -- src/data/resume.ts`, then build and push.
 
+## 2026-11-16 · Early roles collapsed into "Other" (last full version: `a640fe9`)
+
+**Product Analyst Intern** · Facebook Groups · 2013 (was under Meta)
+- Identified and prioritized growth opportunities for Groups; defined metrics and built pipelines for ongoing analysis.
+
+**Periscope Capital** · Toronto, ON · Investment Assistant / Technical Lead · 2012 – 2013
+- Architected and built the internal accounting system; started the move to technology-centric operations.
+- Analyzed and improved the automated trading system.
+
+**BMO Capital Markets** · Toronto, ON · Fixed Income / Money Market Trading Analyst · 2012
+- Co-developed and released a new money-market trading platform.
+- Built the foundation for a real-time system delivering market and trade data to traders.
+
+---
+
 ## 2026-11-16 · Since 2022 section removed (last commit with it: `5ff155b`)
 
 | Label | Text |

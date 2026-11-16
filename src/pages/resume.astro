@@ -27,10 +27,12 @@ import { LINKEDIN_URL, EXPERIENCE, EDUCATION } from '../data/resume';
           <article class="job mt-8 print:mt-4">
             <header class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
               <h3 class="dot text-[1.6rem]">{e.org}</h3>
-              <p class="label">
-                {e.dates}
-                {e.place && <span> · {e.place}</span>}
-              </p>
+              {e.dates && (
+                <p class="label">
+                  {e.dates}
+                  {e.place && <span> · {e.place}</span>}
+                </p>
+              )}
             </header>
             {e.bullets && (
               <ul class="bullets mt-3 border-l border-line pl-4 sm:pl-6">
