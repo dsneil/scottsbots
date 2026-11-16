@@ -52,7 +52,8 @@ export const EXPERIENCE: Employer[] = [
         dates: 'Jun 2018 – Jun 2021',
         bullets: [
           'Click-to-Message ads: grew revenue and adoption by improving ad delivery and models, driving more business outcomes in Messenger.',
-          'Quality and integrity: reduced bad and policy-violating ads across Messenger and Click-to-Message.',
+          'Quality/Integrity: reduced bad and policy-violating ads across Messenger and Click-to-Message.',
+          'Lead cross-company work to drive project alignment and consistently reduce bad and policy-violating ad experiences in Messenger and Click-to-Message ads.',
           'Growth: increased business outcomes from person-to-business conversations, feeding better models and more valuable conversations.',
           'Also covered privacy for Messenger Business AI.',
         ],
