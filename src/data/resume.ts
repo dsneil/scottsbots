@@ -30,8 +30,8 @@ export const SINCE_2022: { label: string; text: string }[] = [
     text: 'Invest and trade across stocks, crypto, prediction markets and sealed collectibles, using research tools I built for each market.',
   },
   {
-    label: 'Social media & publishing',
-    text: 'Co-authored a travel guide that sold hundreds of copies, and gave away thousands of copies of free info products.',
+    label: 'Social media',
+    text: 'Content creation with @fashionbyally (1.5M+ followers across platforms) for brands including Amazon, Apple, Waymo/Google, Air France and Four Seasons. Authored a travel guide that sold hundreds of copies.',
   },
 ];
 
@@ -68,6 +68,16 @@ export const EXPERIENCE: Employer[] = [
           'ScottStats: real-time charting and breakout alerts over custom universes, including 500+ AI stocks across 20+ subsectors.',
           'Distilled a breakout strategy from a transcribed playlist of trading videos, with every rule cited to a quote and timestamp, then backtested and ported it into ScottStats.',
           'CMR Scorecard: turned 500+ market videos and reports into calls plotted on their charts.',
+        ],
+      },
+      {
+        title: 'Social media',
+        team: '@fashionbyally',
+        dates: '2022 – Present',
+        bullets: [
+          'Work with my wife (@fashionbyally, 1.5M+ followers across platforms) on content creation: strategy, video concepting, videography and photography.',
+          'Partnered with global brands including Amazon, Apple, Waymo/Google, Air France and Four Seasons Hotels.',
+          'Authored a travel guide that sold hundreds of copies and drove thousands of newsletter subscribers.',
         ],
       },
     ],
