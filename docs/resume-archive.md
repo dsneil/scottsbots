@@ -81,6 +81,7 @@ consulting, Personal projects).
 ## Earlier one-liners
 
 - Facebook Videos scale (commit `92a886b`): "…informed changes that helped grow Videos to 5B+ daily views." (5B+ came from the Sept 2015 resume; public reports had 8B by Nov 2015.)
+- Brand sentence (commit `247d3cb`): "Partnered with global brands such as Amazon, Apple, Waymo/Google, Four Seasons, United Airlines, and more."
 - Social media opener (commit `99d39b3`): "Work with my wife (@fashionbyally, …)". Changed to "partner" for tech applications. Unused alt: "Co-run @fashionbyally (1.5M+ followers across platforms), a content business: …"
 - Facebook Videos team growth (commit `70cf58c`): "…as the engineering team grew 5x+."
 - Tagline years (commit `6814412`): "AI Product Manager and Data Scientist at Meta for 7 years." (7 = 2014–2021 full-time; 8 counts the 2013 internship)
