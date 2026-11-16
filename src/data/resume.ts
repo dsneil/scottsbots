@@ -43,7 +43,7 @@ export const EXPERIENCE: Employer[] = [
     roles: [],
   },
   {
-    org: 'Facebook',
+    org: 'Meta',
     place: 'Menlo Park, CA',
     dates: '2014 – 2021',
     roles: [
