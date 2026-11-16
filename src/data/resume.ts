@@ -33,7 +33,7 @@ export const EXPERIENCE: Employer[] = [
       },
       {
         lead: 'Startup consulting',
-        text: 'Trained ML models and built extraction pipelines that turn raw building plans into structured data for pre-construction planning. Iterated on the internal data engine (labeling and training tooling) to speed up dataset creation and labeling. Improved data models and chat functionality for a better user experience.',
+        text: 'Trained ML models and built extraction pipelines that turn raw building plans into structured data for pre-construction planning. Iterated on internal training environment to speed up dataset creation and labeling. Improved data models and chat functionality for a better user experience.',
       },
       {
         lead: 'Personal projects',
