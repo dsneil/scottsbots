@@ -81,6 +81,7 @@ consulting, Personal projects).
 ## Earlier one-liners
 
 - Facebook Videos scale (commit `92a886b`): "…informed changes that helped grow Videos to 5B+ daily views." (5B+ came from the Sept 2015 resume; public reports had 8B by Nov 2015.)
+- Tagline years (commit `6814412`): "AI Product Manager and Data Scientist at Meta for 7 years." (7 = 2014–2021 full-time; 8 counts the 2013 internship)
 - Personal projects theme (commit `4464c81`): "General theme across projects is finding datasets and YouTube video catalogs and turning them into actionable tools."
 - Facebook Videos team growth (commit `605bd5f`): "…as the engineering team grew 4x." (4x was the Sept 2015 resume figure)
 - Facebook Videos bullet 2 (commit `58e48bf`): "Defined core metrics, ran A/B test design, evaluation and ship decisions on new Videos products." (trimmed to fit one line)
