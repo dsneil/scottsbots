@@ -4,6 +4,12 @@ export const LINKEDIN_URL = 'https://www.linkedin.com/in/dsneil/';
 export const SITE_HOST = 'scottsbots.xyz';
 export const SITE_URL = `https://${SITE_HOST}/`;
 
+// Text in bullets that renders as a link (web and PDF).
+export const INLINE_LINKS: Record<string, string> = {
+  [SITE_HOST]: SITE_URL,
+  '@fashionbyally': 'https://www.instagram.com/fashionbyally/',
+};
+
 export interface Role {
   title: string;
   team?: string;

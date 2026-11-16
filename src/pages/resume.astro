@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { LINKEDIN_URL, SITE_HOST, SITE_URL, EXPERIENCE, EDUCATION } from '../data/resume';
+import { LINKEDIN_URL, SITE_URL, INLINE_LINKS, EXPERIENCE, EDUCATION } from '../data/resume';
+
+const linkPattern = new RegExp(`(${Object.keys(INLINE_LINKS).map((k) => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`);
 ---
 
 <Layout
@@ -39,7 +41,9 @@ import { LINKEDIN_URL, SITE_HOST, SITE_URL, EXPERIENCE, EDUCATION } from '../dat
                 {e.bullets.map((b) => (
                   <li>
                     <span class="font-semibold">{b.lead}:</span>{' '}
-                    {b.text.split(SITE_HOST).map((part, i) => (i ? [<a href={SITE_URL} class="underline underline-offset-2">{SITE_HOST}</a>, part] : part))}
+                    {b.text.split(linkPattern).map((part) =>
+                      INLINE_LINKS[part] ? <a href={INLINE_LINKS[part]} class="underline underline-offset-2 hover:text-dim">{part}</a> : part
+                    )}
                   </li>
                 ))}
               </ul>
