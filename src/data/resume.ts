@@ -70,7 +70,7 @@ export const EXPERIENCE: Employer[] = [
         bullets: [
           'Led experiment design, evaluation and decisions on new Videos products; informed changes that helped grow Videos to 5B+ daily views.',
           'Covered Performance, Live, Suggested Videos and Facebook Watch.',
-          'Scaled the engineering team’s analysis through tooling, education and mentoring as the team grew 4x.',
+          'Scaled analysis capacity via tooling, education and mentoring as the engineering team grew 4x.',
           'Worked with Data Engineering on datasets, metrics, logging validation and dashboards.',
         ],
       },
