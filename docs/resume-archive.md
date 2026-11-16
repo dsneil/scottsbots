@@ -48,6 +48,7 @@ consulting, Personal projects).
 
 ## Earlier one-liners
 
+- Brand list (commit `1c3a54d`): "Partnered with global brands including Amazon, Apple, Waymo/Google, Air France and Four Seasons Hotels." Summary row: "…for brands including Amazon, Apple, Waymo/Google, Air France and Four Seasons."
 - Social media & publishing (commit `c8ebcd2`): "Co-authored a travel guide that sold hundreds of copies, and gave away thousands of copies of free info products."
 - Facebook role dates were briefly year-only (`e38e995`), reverted to month + year (`a3d1b50`).
 

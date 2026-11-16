@@ -33,7 +33,7 @@ export const SINCE_2022: { label: string; text: string }[] = [
   },
   {
     label: 'Social media',
-    text: 'Content creation with @fashionbyally (1.5M+ followers across platforms) for brands including Amazon, Apple, Waymo/Google, Air France and Four Seasons. Authored a travel guide that sold hundreds of copies.',
+    text: 'Content creation with @fashionbyally (1.5M+ followers across platforms) for brands such as Amazon, Apple, Waymo/Google, Four Seasons and United Airlines. Authored a travel guide that sold hundreds of copies.',
   },
 ];
 
@@ -44,7 +44,7 @@ export const EXPERIENCE: Employer[] = [
     bullets: [
       {
         lead: 'Social media',
-        text: 'Work with my wife (@fashionbyally, 1.5M+ followers across platforms) on content creation: strategy, video concepting, videography and photography. Partnered with global brands including Amazon, Apple, Waymo/Google, Air France and Four Seasons Hotels. Authored a travel guide that sold hundreds of copies and drove thousands of newsletter subscribers.',
+        text: 'Work with my wife (@fashionbyally, 1.5M+ followers across platforms) on content creation: strategy, video concepting, videography and photography. Partnered with global brands such as Amazon, Apple, Waymo/Google, Four Seasons, United Airlines, and more. Authored a travel guide that sold hundreds of copies and drove thousands of newsletter subscribers.',
       },
       {
         lead: 'Trading & crypto',
