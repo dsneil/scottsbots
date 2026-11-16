@@ -80,6 +80,7 @@ consulting, Personal projects).
 
 ## Earlier one-liners
 
+- AI PM quality bullets (commit `2f6bc37`): "Quality/Integrity: reduced bad and policy-violating ads across Messenger and Click-to-Message." and "Lead cross-company work to drive project alignment and consistently reduce bad and policy-violating ad experiences in Messenger and Click-to-Message ads."
 - AI PM Growth bullet (commit `e4937d4`): "Growth: increased business outcomes from person-to-business conversations, feeding better models and more valuable conversations."
 - Startup consulting (commit `b4a12f7`): "Iterated on the internal data engine (labeling and training tooling) to speed up dataset creation and labeling."
 - Personal projects closer (commit `3f3a8ec`): "Common thread: finding datasets and YouTube video catalogs and turning them into actionable tools."
