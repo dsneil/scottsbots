@@ -61,8 +61,8 @@ export const EXPERIENCE: Employer[] = [
         team: 'Instagram Core Business',
         dates: 'Feb 2017 – Jun 2018',
         bullets: [
-          'Handled sensitive analytics projects around the Instagram API through a complex regulatory environment following Cambridge Analytica.',
           'Sized and prioritized opportunities to help businesses grow on Instagram, partnering with Product and Engineering on the Insights and account-tips roadmap.',
+          'Performed sensitive analytics projects for the Instagram API.',
           'Built pipelines and dashboards, filling in gaps for Data Engineering.',
         ],
       },
