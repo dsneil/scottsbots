@@ -28,12 +28,12 @@ export const EXPERIENCE: Employer[] = [
         text: 'Work with my wife (@fashionbyally, 1.5M+ followers across platforms) on content creation: strategy, video concepting, videography and photography. Partnered with global brands such as Amazon, Apple, Waymo/Google, Four Seasons, United Airlines, and more. Authored a travel guide that sold hundreds of copies and drove thousands of newsletter subscribers.',
       },
       {
-        lead: 'Trading & crypto',
-        text: 'Traded and experimented extensively across stocks and crypto, supported by custom research tools I built.',
-      },
-      {
         lead: 'Startup consulting',
         text: 'Trained ML models and built extraction pipelines that turn raw building plans into structured data for pre-construction planning. Iterated on internal training environment to speed up dataset creation and labeling. Improved data models and chat functionality for a better user experience.',
+      },
+      {
+        lead: 'Trading & crypto',
+        text: 'Traded and experimented extensively across stocks and crypto, supported by custom research tools I built.',
       },
       {
         lead: 'Personal projects',
