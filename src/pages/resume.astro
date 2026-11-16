@@ -8,19 +8,19 @@ import { LINKEDIN_URL, EXPERIENCE, EDUCATION } from '../data/resume';
   description="Scott Neil: ML and product work at Meta, contract startup work, investing and the tools on scottsbots."
 >
   <main class="resume">
-    <section class="pt-10 pb-12 print:pt-0 print:pb-5">
+    <section class="pt-10 pb-12 print:pt-0 print:pb-0">
       <h1 class="dot text-[clamp(2.4rem,8vw,4.4rem)]">Scott Neil</h1>
-      <p class="mt-3 leading-relaxed">
+      <p class="mt-3 leading-relaxed print:mt-2">
         AI Product Manager and Data Scientist at Meta for 7 years. Self-employed since 2022.
       </p>
-      <p class="label mt-5 flex flex-wrap gap-x-6 gap-y-2">
+      <p class="label mt-5 flex flex-wrap gap-x-6 gap-y-2 print:mt-1">
         <a href={LINKEDIN_URL} class="hover:text-ink">LinkedIn ↗</a>
         <a href="/" class="hover:text-ink print:hidden">Projects →</a>
         <span class="hidden print:inline">scottsbots.vercel.app</span>
       </p>
     </section>
 
-    <section class="border-t border-line pt-3">
+    <section class="border-t border-line pt-3 print:pt-1">
       <h2 class="label">Experience</h2>
       {
         EXPERIENCE.map((e) => (
