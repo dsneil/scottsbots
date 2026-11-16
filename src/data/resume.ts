@@ -54,7 +54,6 @@ export const EXPERIENCE: Employer[] = [
           'Ads Optimization: grew revenue and adoption by improving ad delivery and models, driving more business outcomes in Messenger. Led project for future version of CTM ads optimization, partnering closely with privacy, legal, and policy to deliver a compliant strategy.',
           'Quality/Integrity: drove cross-company workstream, aligning group leads, and consistently reducing bad and policy-violating ad experiences in Messenger and Click-to-Message ads.',
           'Growth: built person-to-business messaging tools, additionally increasing outcomes and feeding back into model improvements.',
-          'Also covered privacy for Messenger Business AI.',
         ],
       },
       {
@@ -62,7 +61,6 @@ export const EXPERIENCE: Employer[] = [
         team: 'Instagram Core Business',
         dates: 'Feb 2017 – Jun 2018',
         bullets: [
-          'Growth, Insights, API and Discovery.',
           'Handled sensitive analytics projects around the Instagram API through a complex regulatory environment following Cambridge Analytica.',
           'Sized and prioritized opportunities to help businesses grow on Instagram, partnering with Product and Engineering on the Insights and account-tips roadmap.',
           'Built pipelines and dashboards, filling in gaps for Data Engineering.',
