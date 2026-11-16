@@ -80,6 +80,7 @@ consulting, Personal projects).
 
 ## Earlier one-liners
 
+- Personal projects closer (commit `3f3a8ec`): "Common thread: finding datasets and YouTube video catalogs and turning them into actionable tools."
 - Facebook Videos bullet (commit `e4d5208`): "Scaled the engineering team’s analysis through tooling, education and mentoring as the team grew 4x."
 - Brand list (commit `1c3a54d`): "Partnered with global brands including Amazon, Apple, Waymo/Google, Air France and Four Seasons Hotels." Summary row: "…for brands including Amazon, Apple, Waymo/Google, Air France and Four Seasons."
 - Social media & publishing (commit `c8ebcd2`): "Co-authored a travel guide that sold hundreds of copies, and gave away thousands of copies of free info products."
