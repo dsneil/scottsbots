@@ -18,25 +18,6 @@ export interface Employer {
   roles: Role[];
 }
 
-export const SINCE_2022: { label: string; text: string }[] = [
-  {
-    label: 'Personal projects',
-    text: 'Designed, built and shipped 9 tools end to end: market dashboards, Chrome extensions, on-chain analytics and market-data pipelines, several running daily.',
-  },
-  {
-    label: 'Contract startup work',
-    text: 'Contract ML engineer at VAWN, an AI tool that reads electrical construction drawings. Took fire-alarm detection from nothing to 0.849 F1 on a locked test set and unified panel data across 3 sources.',
-  },
-  {
-    label: 'Investing & trading',
-    text: 'Invest and trade across stocks, crypto, prediction markets and sealed collectibles, using research tools I built for each market.',
-  },
-  {
-    label: 'Social media',
-    text: 'Content creation with @fashionbyally (1.5M+ followers across platforms) for brands such as Amazon, Apple, Waymo/Google, Four Seasons and United Airlines. Authored a travel guide that sold hundreds of copies.',
-  },
-];
-
 export const EXPERIENCE: Employer[] = [
   {
     org: 'Self-employed',

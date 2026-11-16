@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { LINKEDIN_URL, SINCE_2022, EXPERIENCE, EDUCATION } from '../data/resume';
+import { LINKEDIN_URL, EXPERIENCE, EDUCATION } from '../data/resume';
 ---
 
 <Layout
@@ -21,20 +21,6 @@ import { LINKEDIN_URL, SINCE_2022, EXPERIENCE, EDUCATION } from '../data/resume'
     </section>
 
     <section class="border-t border-line pt-3">
-      <h2 class="label">Since 2022</h2>
-      <ul class="mt-4 border-t border-line print:mt-2">
-        {
-          SINCE_2022.map((s) => (
-            <li class="grid gap-1 border-b border-line py-3 print:py-1.5 sm:grid-cols-[13rem_1fr] sm:gap-6">
-              <span class="font-semibold">{s.label}</span>
-              <span class="leading-relaxed">{s.text}</span>
-            </li>
-          ))
-        }
-      </ul>
-    </section>
-
-    <section class="mt-14 border-t border-line pt-3 print:mt-6">
       <h2 class="label">Experience</h2>
       {
         EXPERIENCE.map((e) => (

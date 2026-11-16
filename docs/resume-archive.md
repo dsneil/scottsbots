@@ -5,6 +5,15 @@ Retired resume copy, kept for rollback and for pulling ideas back in. Live copy 
 
 Rollback a whole version: `git checkout <commit> -- src/data/resume.ts`, then build and push.
 
+## 2026-11-16 · Since 2022 section removed (last commit with it: `5ff155b`)
+
+| Label | Text |
+|---|---|
+| Personal projects | Designed, built and shipped 9 tools end to end: market dashboards, Chrome extensions, on-chain analytics and market-data pipelines, several running daily. |
+| Contract startup work | Contract ML engineer at VAWN, an AI tool that reads electrical construction drawings. Took fire-alarm detection from nothing to 0.849 F1 on a locked test set and unified panel data across 3 sources. |
+| Investing & trading | Invest and trade across stocks, crypto, prediction markets and sealed collectibles, using research tools I built for each market. |
+| Social media | Content creation with @fashionbyally (1.5M+ followers across platforms) for brands such as Amazon, Apple, Waymo/Google, Four Seasons and United Airlines. Authored a travel guide that sold hundreds of copies. |
+
 ---
 
 ## 2026-11-16 · Self-employed, role-by-role version (commit `98d5157`)
