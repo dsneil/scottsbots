@@ -81,7 +81,7 @@ consulting, Personal projects).
 ## Earlier one-liners
 
 - Facebook Videos scale (commit `92a886b`): "…informed changes that helped grow Videos to 5B+ daily views." (5B+ came from the Sept 2015 resume; public reports had 8B by Nov 2015.)
-- Ads Optimization (commit `48ba899`): "grew revenue and business outcomes in Messenger through improved ad models and delivery."
+- Ads Optimization variant tried and reverted (commit `3d7a6a0`): "grew revenue and business transactions in Messenger…"; live copy back to "business outcomes".
 - Ads Optimization first sentence (commit `815e172`): "grew revenue and adoption by improving ad delivery and models, driving more business outcomes in Messenger."
 - Tagline (commit `e8e3caf`, in `src/pages/resume.astro`): "Product manager and data scientist at Meta for 7 years. Self-employed since 2022."
 - CTM wording (commit `f4beaab`): Ads Optimization said "future version of CTM ads optimization"; Quality/Integrity ended "in Messenger and Click-to-Message ads."
