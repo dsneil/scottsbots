@@ -1,6 +1,8 @@
 // Resume copy. Sources: LinkedIn experience, the 2015 resume, and each project's repo; no invented numbers.
 
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/dsneil/';
+export const CONTACT_EMAIL = 'workwithscottn@gmail.com';
+export const PDF_PATH = '/Scott-Neil-Resume.pdf';
 export const SITE_HOST = 'scottsbots.xyz';
 export const SITE_URL = `https://${SITE_HOST}/`;
 

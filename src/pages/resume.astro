@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { LINKEDIN_URL, SITE_URL, INLINE_LINKS, EXPERIENCE, EDUCATION } from '../data/resume';
+import { LINKEDIN_URL, SITE_URL, CONTACT_EMAIL, PDF_PATH, INLINE_LINKS, EXPERIENCE, EDUCATION } from '../data/resume';
 
 const linkPattern = new RegExp(`(${Object.keys(INLINE_LINKS).map((k) => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`);
 ---
@@ -17,7 +17,8 @@ const linkPattern = new RegExp(`(${Object.keys(INLINE_LINKS).map((k) => k.replac
       </p>
       <p class="label mt-5 flex flex-wrap gap-x-6 gap-y-2 print:mt-1">
         <a href={LINKEDIN_URL} class="hover:text-ink">LinkedIn ↗</a>
-        <a href="/" class="hover:text-ink print:hidden">Projects →</a>
+        <a href={`mailto:${CONTACT_EMAIL}`} class="hover:text-ink">Contact ✉</a>
+        <a href={PDF_PATH} download class="hover:text-ink print:hidden">Download PDF ↓</a>
         <a href={SITE_URL} class="hidden hover:text-ink print:inline">Website ↗</a>
       </p>
     </section>
