@@ -2,7 +2,7 @@
 
 Needs the dev server on :4321 (npx astro dev --port 4321) and Python Playwright.
 Writes public/Scott-Neil-Resume.pdf (served for the Download link) and a copy in
-the parent folder for side-panel review. Re-run after every resume change.
+../JobSearch/resume/ for side-panel review. Re-run after every resume change.
 """
 import re
 import shutil
@@ -12,7 +12,7 @@ from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / 'public' / 'Scott-Neil-Resume.pdf'
-COPY = ROOT.parent / 'Scott-Neil-Resume.pdf'
+COPY = ROOT.parent / 'JobSearch' / 'resume' / 'Scott-Neil-Resume.pdf'
 
 with sync_playwright() as p:
     browser = p.chromium.launch()
