@@ -81,6 +81,7 @@ consulting, Personal projects).
 ## Earlier one-liners
 
 - Facebook Videos scale (commit `92a886b`): "…informed changes that helped grow Videos to 5B+ daily views." (5B+ came from the Sept 2015 resume; public reports had 8B by Nov 2015.)
+- Facebook Videos team growth (commit `605bd5f`): "…as the engineering team grew 4x." (4x was the Sept 2015 resume figure)
 - Facebook Videos bullet 2 (commit `58e48bf`): "Defined core metrics, ran A/B test design, evaluation and ship decisions on new Videos products." (trimmed to fit one line)
 - Facebook Videos bullet 2 (commit `0fa4ca6`): "Defined core metrics and ran A/B test design, evaluation and ship decisions on new Videos products."
 - Facebook Videos bullets 2–4 (commit `affdef4`): "Ran A/B test design, evaluation and ship decisions on new Videos products." / "Scaled analysis capacity via tooling, education and mentoring as the engineering team grew 4x." / "Defined core metrics and validated logging with Data Engineering; built datasets and dashboards." (4th removed)
