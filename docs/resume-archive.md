@@ -5,6 +5,14 @@ Retired resume copy, kept for rollback and for pulling ideas back in. Live copy 
 
 Rollback a whole version: `git checkout <commit> -- src/data/resume.ts`, then build and push.
 
+## 2026-11-16 · Locations and early dates removed (last version with them: `043a0a1`)
+
+- Meta (then "Facebook"): Menlo Park, CA · 2014 – 2021 → now 2013 – 2021, internship moved back under Meta.
+- Other: Periscope Capital · 2012 – 2013 (Toronto, ON); BMO Capital Markets · 2012 (Toronto, ON).
+- Education: University of Waterloo · 2009 – 2014.
+
+---
+
 ## 2026-11-16 · Early roles collapsed into "Other" (last full version: `a640fe9`)
 
 **Product Analyst Intern** · Facebook Groups · 2013 (was under Meta)

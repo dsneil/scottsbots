@@ -44,8 +44,7 @@ export const EXPERIENCE: Employer[] = [
   },
   {
     org: 'Meta',
-    place: 'Menlo Park, CA',
-    dates: '2014 – 2021',
+    dates: '2013 – 2021',
     roles: [
       {
         title: 'AI Product Manager',
@@ -75,14 +74,19 @@ export const EXPERIENCE: Employer[] = [
           'Worked with Data Engineering on datasets, metrics, logging validation and dashboards.',
         ],
       },
+      {
+        title: 'Product Analyst Intern',
+        team: 'Facebook Groups',
+        dates: '2013',
+        bullets: ['Identified and prioritized growth opportunities for Groups; defined metrics and built pipelines for ongoing analysis.'],
+      },
     ],
   },
   {
     org: 'Other',
     bullets: [
-      { lead: 'Facebook', text: 'Product Analyst Intern, Groups · 2013' },
-      { lead: 'Periscope Capital', text: 'Investment Assistant / Technical Lead · 2012 – 2013' },
-      { lead: 'BMO Capital Markets', text: 'Fixed Income / Money Market Trading Analyst · 2012' },
+      { lead: 'Periscope Capital', text: 'Investment Assistant / Technical Lead' },
+      { lead: 'BMO Capital Markets', text: 'Fixed Income / Money Market Trading Analyst' },
     ],
     roles: [],
   },
@@ -91,5 +95,4 @@ export const EXPERIENCE: Employer[] = [
 export const EDUCATION = {
   school: 'University of Waterloo',
   degree: 'BASc, Systems Design Engineering',
-  dates: '2009 – 2014',
 };
