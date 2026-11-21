@@ -1,8 +1,9 @@
 """Export /resume/ to PDF (print styles, US Letter).
 
 Needs the dev server on :4321 (npx astro dev --port 4321) and Python Playwright.
-Writes public/Scott-Neil-Resume.pdf (served for the Download link) and a copy in
-../JobSearch/resume/ for side-panel review. Re-run after every resume change.
+Writes public/Scott-Neil-Resume.pdf (served for the Download link). If a sibling
+../JobSearch/resume/ folder exists, also copies it there. Re-run after every resume change.
+Setup: npm install; pip install playwright; python3 -m playwright install chromium.
 """
 import re
 import shutil
@@ -23,7 +24,9 @@ with sync_playwright() as p:
     page.pdf(path=str(OUT), format='Letter', print_background=True)
     browser.close()
 
-shutil.copyfile(OUT, COPY)
+if COPY.parent.is_dir():
+    shutil.copyfile(OUT, COPY)
+    print(f'copied to {COPY}')
 data = OUT.read_bytes()
 pages = len(re.findall(rb'/Type\s*/Page[^s]', data))
 links = [u.decode() for u in re.findall(rb'/URI\s*\(([^)]*)\)', data)]
